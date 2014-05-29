@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
-  s.name        = 'UberCache'
+  s.name        = 'uber_cache'
   s.version     = '0.0.1'
-  s.date        = '2014-06-06'
+  s.date        = '2014-05-29'
   s.summary     = "Simple Caching Wrapper for Dalli/Memcache"
   s.description = "Simple Caching Wrapper for Dalli/Memcache"
   s.authors     = ["Chris Reister"]
