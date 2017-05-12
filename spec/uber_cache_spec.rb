@@ -1,4 +1,4 @@
-require 'spec_helper'
+require './spec/spec_helper'
 require './lib/uber_cache'
 
 describe UberCache do
@@ -176,7 +176,8 @@ describe UberCache do
         segment0.include?("Person").should == true
         segment1 = @cache.read("two-people-1")
         segment1.size.should == 80
-        segment1.should == "ate[\vi\x00i\x03\xEE4%i\x00i\x00i\x00f\f2299161:\x10@life_storyI\"\x01\xBDAll the ways you wish you could be, "
+        segment1[0..2].should == "ate"
+        segment1[-36..-1].should == "All the ways you wish you could be, "
         segment8 = @cache.read("two-people-8")
         segment8.include?("cry-for-help").should == true
         segment9 = @cache.read("two-people-9")

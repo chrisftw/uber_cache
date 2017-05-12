@@ -1,13 +1,13 @@
 PATH
   remote: .
   specs:
-    UberCache (0.0.1)
+    uber_cache (0.0.1)
       dalli (~> 2.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    dalli (2.7.2)
+    dalli (2.7.6)
     diff-lcs (1.2.5)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
@@ -22,5 +22,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  UberCache!
   rspec
+  uber_cache!
+
+BUNDLED WITH
+   1.10.6

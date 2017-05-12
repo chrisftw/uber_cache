@@ -7,8 +7,9 @@ class UberCache
   @cache_prefix
   @hosts
 
-  def initialize(cache_prefix, hosts)
+  def initialize(cache_prefix, hosts, opts = {})
     @cache_prefix = cache_prefix
+    @dalli_opts = opts
     @hosts = hosts
   end
 
@@ -83,7 +84,7 @@ class UberCache
 
   private
   def client
-    @client ||= Dalli::Client.new(@hosts)
+    @client ||= Dalli::Client.new(@hosts, @dalli_opts)
   end
 
   #namespace the keys - to not kill other stuff.
